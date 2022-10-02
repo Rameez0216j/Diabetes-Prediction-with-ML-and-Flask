@@ -9,13 +9,12 @@
 
 Create a new environment
 
- ---
+```
  virtualenv env_name
+```
 
- ---
 
  Installing requirements.txt
- ---
+```
  pip install -r requirements.txt
-
- ---
+```
