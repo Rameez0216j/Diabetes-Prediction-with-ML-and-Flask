@@ -1,0 +1,85 @@
+{% extends 'main.html' %}
+
+{% block title %}
+<title>Prediction Panel</title>
+{% endblock title %}
+
+{% block body %}
+
+<!-- Main page structure -->
+<div class="Main_proj_title">
+	<marquee class="Design" scrollamount="15" behavior="" direction="">
+		<pre> DIABETIES PREDICTION USING LOGISTIC REGRESSION SND SVM(Support Vector Machine).</pre>
+	</marquee>
+</div>
+<div class="Main_container">
+
+	<!-- DashBoard -->
+	<div class="Main_Dashboard">
+
+		<!-- Description was removed from here -->
+
+		<div class="Pred_panel">
+			<div class="Main_page_title title2">
+				<h2>Prediction</h2>
+			</div>
+			<div class="form_modified">
+				<form class="row g-2">
+					<div class="col-md-6">
+						<label for="Pregnancies" class="form-label">Pregnancies</label>
+						<input type="number" class="form-control" min="0" max="100" id="Pregnancies"
+							  placeholder="Number of times pregnant">
+					</div>
+					<div class="col-md-6">
+						<label for="Glucose" class="form-label">Glucose</label>
+						<input type="text" class="form-control" id="Glucose" placeholder="Plasma glucose concentration">
+					</div>
+					<div class="col-md-6">
+						<label for="BloodPressure" class="form-label">BloodPressure</label>
+						<input type="text" class="form-control" id="BloodPressure"
+							  placeholder="Diastolic blood pressure (mm Hg)">
+					</div>
+					<div class="col-md-6">
+						<label for="SkinThickness" class="form-label">SkinThickness</label>
+						<input type="text" class="form-control" id="SkinThickness"
+							  placeholder="Triceps skin fold thickness (mm)">
+					</div>
+					<div class="col-md-6">
+						<label for="Insulin" class="form-label">Insulin</label>
+						<input type="text" class="form-control" id="Insulin"
+							  placeholder="2-Hour serum insulin (mu U/ml)">
+					</div>
+					<div class="col-md-6">
+						<label for="BMI" class="form-label">BMI</label>
+						<input type="text" class="form-control" id="BMI"
+							  placeholder="Body mass index (weight in kg/(height in m)^2)">
+					</div>
+					<div class="col-md-6">
+						<label for="DiabetesPedigreeFunction" class="form-label">DiabetesPedigreeFunction</label>
+						<input type="text" class="form-control" id="DiabetesPedigreeFunction"
+							  placeholder="Diabetes pedigree function">
+					</div>
+					<div class="col-md-6">
+						<label for="Age" class="form-label">Age</label>
+						<input type="number" min="1" max="100" class="form-control" id="Age" placeholder="Age (years)">
+					</div>
+				</form>
+			</div>
+
+			<!-- <div class="space"></div> -->
+		</div>
+
+		<div class="pred_container">
+			<button class="btn_mod">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Predict
+			</button>
+		</div>
+		<!-- Testing -->
+
+	</div>
+</div>
+{% endblock body %}

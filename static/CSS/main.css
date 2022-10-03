@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    height: 100%;
+    /* background-color: #1eff00; */
+}
+
+body{
+    background-color: #03042c;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    /* background-color: #e600ff; */
+}
+
+/******************************************************  Navbar Modification  ******************************************************/
+
+/****************************************************  Navbar Modification end  ****************************************************/
+
+
+/* Placed after modification of footer */
+.project_name{
+	font-family: 'Kalam', cursive;
+}
+.project_logo{
+	height: 45px;
+	margin-right: 5px;
+}
+
+.footer_content{
+	background-color: black;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	font-size: small;
+
+	margin-top: auto;
+}
+/* Placed after modification of footer */
+
+
+.Main_container{
+    /* position: absolute; */ /* Problematic  */
+    position: relative;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.Design {
+    font-size: 30px;
+    height: 50px;
+    width: 98%;
+    border: 2px solid #2e2d2d;
+    border-radius: 5px;
+    background-color: #212121;
+    color: crimson;
+    box-shadow: 0px 25px 50px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+.Design pre{
+    font-family: 'Play', sans-serif;
+    text-shadow: 5px 5px 15px rgb(0, 0, 0);
+    /* Most important */
+    overflow: visible;
+}
+.Main_Dashboard{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+.Dashboard_Desc{
+    height: auto;   /* changed to solve overflow problem */
+    width: 30vw;
+    background-color: rgb(247, 243, 243);
+    border: 1px solid rgb(199, 194, 194);
+    border-radius: 8px 8px 8px 8px;
+    transition: box-shadow 0.5s ease;
+}
+.Pred_panel{
+    position: relative;
+    height: auto;   /* To solve overflow problem */
+    width: 75vw;
+    background-color: white;
+    transition: box-shadow 0.5s ease;
+    border: 1px solid rgb(199, 194, 194);
+    border-radius: 8px 8px 8px 8px;
+
+    margin: auto; /* footer problem solved and set prediction panel center horizontally */
+}
+.Pred_panel:hover{
+    box-shadow: 0px 25px 60px rgba(6, 97, 235, 0.5);
+}
+.Main_Dashboard .Main_page_title{
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgb(151, 148, 148);
+    border: 1px solid rgb(199, 194, 194);
+    border-radius: 8px 8px 0px 0px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+
+.title2{
+    background-color: bisque;
+}
+
+.form_modified{
+    display: block;
+    height: 70%;
+    padding: 40px;
+}
+
+@media screen and (max-width:992px) and (min-width:400px){
+    .Dashboard_Desc{
+        height: auto;
+        width: 100%;
+    }
+    .Pred_panel{
+        margin-top: 20px;
+        height: auto;
+        width: 100%;
+    }
+    .Main_Dashboard{
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px;
+    }
+}
+
+
+
+/* Modified content */
+
+
+.pred_container{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    /* to avoid footer collide with button */
+    margin: 0px 10px;
+}
+
+.Main_proj_title{
+    margin-top: 20px;
+}
+
+.testing{
+    background-color: red;
+}
+
+.inputs{
+    height: 100%;
+    width: 100%;
+}
+
+/**********************************************  Targeting spans in button to animate  **********************************************/
+.btn_mod{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: white;
+    overflow: hidden;
+    transition: color 0.5s ease,background-color 0.5s ease;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+
+.btn_mod span:nth-child(1){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(to right,#0c002b,#1799ff);
+    animation: anime_1 2s linear infinite;
+}
+@keyframes anime_1{
+    0%{
+        transform: translate(-100%);
+    }
+    100%{
+        transform: translate(100%);
+    }
+}
+
+.btn_mod span:nth-child(2){
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 2px;
+    height: 100%;
+    background:linear-gradient(to bottom,#0c002b,#1799ff);
+    animation: anime_2 2s linear infinite;
+    /* To synchronize */
+    animation-delay: 1s;
+}
+@keyframes anime_2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+
+
+.btn_mod span:nth-child(3){
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(to left,#0c002b,#1799ff);
+    animation: anime_3 2s linear infinite;
+}
+@keyframes anime_3{
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+
+
+.btn_mod span:nth-child(4){
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 2px;
+    height: 100%;
+    background:linear-gradient(to top,#0c002b,#1799ff);
+    animation: anime_4 2s linear infinite;
+    /* To synchronize */
+    animation-delay: 1s;
+}
+@keyframes anime_4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+/* Hover Effect */
+.btn_mod:hover{
+    background: #EEEB18;
+    color: black;
+    box-shadow: 0px 20px 40px #EEEB18;
+    border-radius: 0px solid transparent;
+}
+/* removing | hiding sliding light effect  */
+.btn_mod:hover span{
+    background: #EEEB18;
+    visibility: hidden;
+}
+
+/*****************************************************  End button animation****************************************************  */
