@@ -22,5 +22,13 @@ def index():
 def main():
     return render_template("about.html")
 
+@app.route("/contact_mail")
+def contact_email():
+    return render_template("contact_email.html")
+
+@app.route("/error")
+def error_found():
+    return render_template("Error_page.html")
+
 if(__name__=="__main__"):
     app.run(debug=True)

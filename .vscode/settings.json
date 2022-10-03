@@ -3,5 +3,6 @@
         "diabities",
         "jsonify",
         "virtualenv"
-    ]
+    ],
+    "terminal.integrated.fontSize": 11
 }

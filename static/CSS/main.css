@@ -163,6 +163,27 @@ body{
     width: 100%;
 }
 
+/* Mail sent button */
+.btn_mail{
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    width: 150px;
+    background-color: #403838;
+    border: 2px solid #5e5e5e;
+    border-radius: 5px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+
+}
+.btn_mail:hover{
+    color: Black;
+    background-color: #0dcaf0;
+    box-shadow: 0px 25px 25px rgb(58, 58, 140);
+}
+
+/* Mail sent button end */
+
 /**********************************************  Targeting spans in button to animate  **********************************************/
 .btn_mod{
     position: absolute;
@@ -278,4 +299,122 @@ body{
     visibility: hidden;
 }
 
-/*****************************************************  End button animation****************************************************  */
+
+/*****************************************************  End button animation*****************************************************/
+
+
+/******************************************************** About us Begin ********************************************************/
+
+.About_title{
+    color: white;
+}
+.About_content{
+    color: white;
+}
+.data_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Data_details{
+    display: inline-block;
+    border: 2px solid white;
+    color: white;
+    padding: 20px;
+    margin:20px auto;
+
+}
+.Data_details ul li pre{
+    display: inline;
+}
+.About_content{
+    text-align: justify;
+}
+.About_all{
+    width: 96%;
+    margin: auto;
+}
+.mail_to_us{
+    margin: 25px;
+    padding: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid blue;
+    transition: box-shadow 0.5s ease;
+}
+.mail_to_us:hover{
+    box-shadow: 0px 25px 60px rgba(6, 97, 235, 0.5);;
+}
+/********************************************************** About us End **********************************************************/
+
+
+/************************************************************ Error page ************************************************************/
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.image_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image_container img{
+    height: 450px;
+}
+.wrapper h1{
+     font-size: 2.5rem;
+}
+.wrapper .message{
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+}
+.go_to_home_button{
+    background: rgb(88,0,202);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+
+}.go_to_home_button:hover{
+    background: rgb(83, 30, 153);
+    color: white;
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width:992px) and (min-width:593px){
+    .image_container img{
+        height: 400px;
+    }
+   .wrapper .message{
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+}
+}
+
+@media screen and (max-width:592px) and (min-width:400px){
+    .image_container img{
+        height: 250px;
+    }
+   .wrapper .message{
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+}
+}
+
+/********************************************************** Error page End **********************************************************/
