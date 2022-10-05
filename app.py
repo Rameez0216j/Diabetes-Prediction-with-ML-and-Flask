@@ -53,7 +53,7 @@ def predict_api():
 @app.route("/predict_result",methods=['POST'])
 def predict_result():
     try:
-        print(list(request.form.values()))
+        # print(list(request.form.values()))
         data=[float(x) for x in list(request.form.values())]
         # print(data)
         data=[data]
