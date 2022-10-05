@@ -51,27 +51,18 @@ def predict_api():
 
 @app.route("/predict_result",methods=['POST'])
 def predict_result():
-    data=[float(x) for x in list(request.form.values())]
-    data=[data]
-    data[0][1:6]=scaler.transform(np.array([data[0][1:6]])).flatten()
-    ans=reg_model.predict(data)[0]
-    if(ans==1):
-        flash(" The person is prone to Diabetic ",'danger')
-    else:
-        flash(" The person not Diabetic ",'success')
-    return redirect('/')
-    # try:
-    #     data=[float(x) for x in list(request.form.values())]
-    #     data=[data]
-    #     data[0][1:6]=scaler.transform(np.array([data[0][1:6]])).flatten()
-    #     ans=reg_model.predict(data)[0]
-    #     if(ans==1):
-    #         flash(" The person is prone to Diabetic ",'danger')
-    #     else:
-    #         flash(" The person not Diabetic ",'success')
-    #     return redirect('/')
-    # except:
-    #     return render_template("Error_page.html")
+    try:
+        data=[float(x) for x in list(request.form.values())]
+        data=[data]
+        data[0][1:6]=scaler.transform(np.array([data[0][1:6]])).flatten()
+        ans=reg_model.predict(data)[0]
+        if(ans==1):
+            flash(" The person is prone to Diabetic ",'danger')
+        else:
+            flash(" The person not Diabetic ",'success')
+        return redirect('/')
+    except:
+        return render_template("Error_page.html")
 
 
 if(__name__=="__main__"):

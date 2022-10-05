@@ -20,20 +20,16 @@ body{
 
 
 
+/******************************************************* Result Message start *******************************************************/
+
+.adjust{
+    margin: 20px 50px 10px;
+}
+
+/******************************************************** Result Message end ********************************************************/
 
 
-
-/******************************************************  Navbar Modification  ******************************************************/
-
-/****************************************************  Navbar Modification end  ****************************************************/
-
-
-
-
-
-
-
-/* Placed after modification of footer */
+/************************************************ Placed after modification of footer ************************************************/
 .project_name{
 	font-family: 'Kalam', cursive;
 }
@@ -52,7 +48,7 @@ body{
 
 	margin-top: auto;
 }
-/* Placed after modification of footer */
+/*********************************************** Placed after modification of footer ***********************************************/
 
 
 .Main_container{
@@ -344,6 +340,7 @@ body{
 }
 .About_content{
     color: white;
+    text-align: justify;
 }
 .data_container{
     display: flex;
@@ -360,9 +357,6 @@ body{
 }
 .Data_details ul li pre{
     display: inline;
-}
-.About_content{
-    text-align: justify;
 }
 .About_all{
     width: 96%;
@@ -473,7 +467,7 @@ body{
 }
 
 
-@media screen and (max-width:992px) and (min-width:593px){
+@media screen and (max-width:992px) and (min-width:533px){
     .image_container img{
         height: 400px;
     }
@@ -485,7 +479,10 @@ body{
 }
 }
 
-@media screen and (max-width:592px) and (min-width:400px){
+
+/* major Screen modifications done here  */
+
+@media screen and (max-width:532px) and (min-width:300px){
     .image_container img{
         height: 250px;
     }
@@ -495,23 +492,60 @@ body{
         text-align: center;
         width: 70%;
     }
+    .footer_content{
+        font-size: 10px;
+    }
+    .Pred_panel{
+        margin-top: 20px;
+        height: auto;
+        width: 100%;
+    }
+    .Design {
+        font-size: 15px;
+        height: 25px;
+        width: 98%;
+        border-radius: 2px;
+        
+    }
+    .mail_to_us{
+        margin: 10px 0px;
+    }
+    .About_project{
+        font-size: small;
+    }
+    .data_container{
+        font-size: small;
+    }
+    .Data_details{
+        display: inline-block;
+        border: 2px solid white;
+        color: white;
+        padding: 5px;
+        margin: 10px 0px;
+    
+    }
+    .flashes{
+        margin: 0px;
+        padding: 0px;
+        font-size: 12px;
+    }
+    .adjust{
+        margin: 20px 20px 10px;
+    }
+    
+}
+
+/* major Screen modifications end */
+
+
+
+
+@media screen and (max-width:299px) and (min-width:100px){
+    .footer_content{
+        font-size: 8px;
+    }
 }
 
 /********************************************************** Error page End **********************************************************/
 
 
-
-
-
-
-
-/******************************************************* Result Message start *******************************************************/
-.adjust_message{
-    margin: 20px 50px 10px;
-}
-@media screen and (max-width:592px) and (min-width:400px){
-   .adjust_message{
-        margin: 10px 10px 10px;
-    }
-}
-/******************************************************** Result Message end ********************************************************/

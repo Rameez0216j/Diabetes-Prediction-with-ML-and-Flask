@@ -20,9 +20,9 @@
 
 {% with messages = get_flashed_messages(with_categories=true) %}
 {% if messages %}
-<ul class=flashes>
+<ul class="flashes">
     {% for category, message in messages %}
-    <div class="alert adjust_message alert-{{category}} alert-dismissible fade show my-4" role="alert">
+    <div class="alert adjust alert-{{category}} alert-dismissible fade show my-4" role="alert">
         <strong>Result : </strong> {{message}}.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
