@@ -8,7 +8,9 @@ from flask import session
 
 
 app=Flask(__name__, template_folder='./templates', static_folder='./static')
-SESSION_TYPE = 'memcache'
+
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SECRET_KEY'] = 'mlappisrunninghere'
 
 
 reg_model=pickle.load(open("diabities_log_reg.pkl",'rb'))
@@ -73,9 +75,4 @@ def predict_result():
 
 
 if(__name__=="__main__"):
-
-
-    app.secret_key = 'super secret key'
-    app.config['SESSION_TYPE'] = 'filesystem'
-
     app.run(debug=True)
