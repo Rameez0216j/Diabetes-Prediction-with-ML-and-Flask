@@ -7,7 +7,7 @@ from flask import flash
 from flask import session
 
 
-app=Flask(__name__)
+app=Flask(__name__, template_folder='./templates', static_folder='./static')
 SESSION_TYPE = 'memcache'
 
 
