@@ -1,0 +1,114 @@
+{% extends 'main.html' %}
+
+{% block title %}
+<title>Prediction Panel</title>
+{% endblock title %}
+
+{% block body %}
+
+<!-- Main page structure -->
+<div class="Main_proj_title">
+    <marquee class="Design" scrollamount="15" behavior="" direction="">
+        <pre> DIABETIES PREDICTION USING LOGISTIC REGRESSION SND SVM(Support Vector Machine).</pre>
+    </marquee>
+</div>
+
+
+
+
+<!-- Message box -->
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul class=flashes>
+    {% for category, message in messages %}
+    <div class="alert adjust_message alert-{{category}} alert-dismissible fade show my-4" role="alert">
+        <strong>Result : </strong> {{message}}.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<!-- Message box end -->
+
+
+
+
+<div class="Main_container">
+
+    <!-- DashBoard -->
+    <form action="{{ url_for('predict_result') }}" method="POST">
+        <div class="Main_Dashboard">
+
+            <!-- Description was removed from here -->
+
+            <div class="Pred_panel">
+                <div class="Main_page_title title2">
+                    <h2>Prediction</h2>
+                </div>
+                <div class="form_modified">
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <label for="Pregnancies" class="form-label">Pregnancies</label>
+                            <input type="number" class="form-control" min="0" max="100" id="Pregnancies"
+                                  placeholder="Number of times pregnant" name="1">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Glucose" class="form-label">Glucose</label>
+                            <input type="text" class="form-control" id="Glucose"
+                                  placeholder="Plasma glucose concentration" name="2">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="BloodPressure" class="form-label">BloodPressure</label>
+                            <input type="text" class="form-control" id="BloodPressure"
+                                  placeholder="Diastolic blood pressure (mm Hg)" name="3">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="SkinThickness" class="form-label">SkinThickness</label>
+                            <input type="text" class="form-control" id="SkinThickness"
+                                  placeholder="Triceps skin fold thickness (mm)" name="4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Insulin" class="form-label">Insulin</label>
+                            <input type="text" class="form-control" id="Insulin"
+                                  placeholder="2-Hour serum insulin (mu U/ml)" name="5">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="BMI" class="form-label">BMI</label>
+                            <input type="text" class="form-control" id="BMI"
+                                  placeholder="Body mass index (weight in kg/(height in m)^2)" name="6">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="DiabetesPedigreeFunction" class="form-label">DiabetesPedigreeFunction</label>
+                            <input type="text" class="form-control" id="DiabetesPedigreeFunction"
+                                  placeholder="Diabetes pedigree function" name="7">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Age" class="form-label">Age</label>
+                            <input type="number" min="1" max="100" class="form-control" id="Age"
+                                  placeholder="Age (years)" name="8">
+                        </div>
+                        <!-- <input type="submit"> -->
+                    </div>
+                </div>
+
+                <!-- <div class="space"></div> -->
+            </div>
+
+            <div class="pred_container">
+                <button type="submit" class="btn_mod">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Predict
+                </button>
+            </div>
+            <!-- Testing -->
+
+        </div>
+    </form>
+</div>
+{% endblock body %}
