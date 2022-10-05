@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 from flask import flash
 
-# To solve session error
 from flask import session
 
 
@@ -12,12 +11,11 @@ app=Flask(__name__)
 SESSION_TYPE = 'memcache'
 
 
-# Loading the model
 reg_model=pickle.load(open("diabities_log_reg.pkl",'rb'))
 scaler=pickle.load(open("Scaler.pkl",'rb'))
 
 
-@app.route("/") # -----> / implies blank url
+@app.route("/")
 def index():
     return render_template("index.html")
 
@@ -47,23 +45,19 @@ def predict_api():
         print(ans)
         return jsonify(int(ans))
     except:
-        # return jsonify(404)
         pass
 
 @app.route("/predict_result",methods=['POST'])
 def predict_result():
     try:
-        # print(list(request.form.values()))
         data=[float(x) for x in list(request.form.values())]
-        # print(data)
         data=[data]
-        # print(data)
         data[0][1:6]=scaler.transform(np.array([data[0][1:6]])).flatten()
         ans=reg_model.predict(data)[0]
         if(ans==1):
-            flash(" The person is prone to Diabetic ",'danger') # flash(Message,category)
+            flash(" The person is prone to Diabetic ",'danger')
         else:
-            flash(" The person not Diabetic ",'success') # flash(Message,category)
+            flash(" The person not Diabetic ",'success')
         return redirect('/')
     except:
         return render_template("Error_page.html")
