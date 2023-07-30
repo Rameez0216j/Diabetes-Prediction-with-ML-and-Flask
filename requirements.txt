@@ -6,4 +6,4 @@ matplotlib
 seaborn
 gunicorn
 Flask-Session
-sklearn
+scikit-learn
